@@ -1,0 +1,91 @@
+main {
+  width: 300px;
+  /*main contents 사이즈지정
+  안하면 page크기에 맞춤해버림*/
+}
+
+* {
+  box-sizing: border-box;
+  /*textbox 사이즈가 아래 버튼과 일치하게만듦*/
+  color: white;
+  /*버튼내부 글자를 흰색으로 지정함*/
+} /* '*'전체 선택자 모든 contents에 속성부여 */
+
+input,
+button {
+  height: 70px;
+  /*input display랑 button 높이*/
+
+  /*outline: none;*/
+}
+
+input {
+  width: 100%;
+  /*button과 width맞춤*/
+  text-align: right;
+  border: none;
+  background-color: #5b5b5d;
+
+  /*padding-right: 1rem;*/
+  /*font-size: 3rem;*/
+}
+/*rem: responsible site 만들기위한 font 단위
+(root em)최상위 요소 html에 비례하여 크기를 가지는 상대적길이*/
+
+button {
+  background-color: #828284;
+  /*button 배경색*/
+  border: 1.5px solid #454448;
+  /*button 테두리에 solid 선을 1.5px크기로 넣어라*/
+  font-size: 2rem;
+}
+
+button:nth-child(4n + 2),
+/* 2[=(4x0)+2, 6[=(4x1)+2], 8[=(4x2)+2]
+2번째 칸부터 4번째칸에 해당하는 요소*/
+button:last-child {
+  background-color: rgb(231, 77, 136);
+}
+/*위에 지정한 요소의 마지막 자식요소에 색을 넣어라*/
+
+/*css pseudo selector로 n번째 버튼에 색 입히기
+  nth: n번째(th)
+  child: 자식요소
+*/
+
+button:hover {
+  /*hover 공중에 뜨다 - 마우스 오버*/
+  opacity: 0.8;
+  /*opacity 불투명*/
+}
+/*button에 마우스를 올리면 0.8만큼 불투명*/
+
+.button {
+  display: grid;
+  /* 버튼에 grid 적용*/
+
+  grid-template-columns: repeat(4, 1fr);
+  /*한 colums에 4개를 넣는데, 각 1비율로 넣어라
+  =grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  fr: fraction(파편,분수)
+  template-columns: grid 형태 정의 
+  row 행, columns 열
+  */
+}
+
+.ac {
+  grid-column: 1/4;
+  /*첫 번째 선부터 4번째 선까지 지정
+  grid에서 ac버튼은 1-4번까지 차지함(1-5까지 선중에)
+  */
+}
+
+.zero {
+  grid-column: 1/3;
+  /*
+  gird
+  첫 번째 선부터 3번째 선까지 지정
+  grid에서 ac버튼은 1-3번까지 차지함(1-5까지 선중에)
+  */
+}
