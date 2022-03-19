@@ -13,7 +13,6 @@ body {
   vertical-align: middle;
   background-color: rgb(34, 34, 34);
 }
-
 /*body tag 자체를 web page중앙에 정렬*/
 
 main {
@@ -43,9 +42,8 @@ input {
   text-align: right;
   border: none;
   background-color: #5b5b5d;
-
-  /*padding-right: 1rem;*/
-  /*font-size: 3rem;*/
+  padding-right: 1rem;
+  font-size: 3rem;
 }
 /*rem: responsible site 만들기위한 font 단위
 (root em)최상위 요소 html에 비례하여 크기를 가지는 상대적길이*/
