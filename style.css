@@ -15,18 +15,18 @@ body {
 }
 /*body tag 자체를 web page중앙에 정렬*/
 
-main {
-  width: 300px;
-  /*main contents 사이즈지정
-  안하면 page크기에 맞춤해버림*/
-}
-
 * {
   box-sizing: border-box;
   /*textbox 사이즈가 아래 버튼과 일치하게만듦*/
   color: white;
   /*버튼내부 글자를 흰색으로 지정함*/
 } /* '*'전체 선택자 모든 contents에 속성부여 */
+
+main {
+  width: 300px;
+  /*main contents 사이즈지정
+  안하면 page크기에 맞춤해버림*/
+}
 
 input,
 button {
@@ -76,7 +76,7 @@ button:hover {
 }
 /*button에 마우스를 올리면 0.8만큼 불투명*/
 
-.button {
+.button-wrap {
   display: grid;
   /* 버튼에 grid 적용*/
 
